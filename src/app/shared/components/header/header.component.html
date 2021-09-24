@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <!-- <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button> -->
+
+  <div class="logo" fxLayout="row" fxLayoutAlign="start center">
+    <img
+      class="logo"
+      src="../../../../assets/images/LOGO.png"
+      alt="Logo.ng"
+      title="Devotana"
+    />
+    <p>Devotana</p>
+
+    <select (chnage)="onLanguageChange()" [(ngModel)]="selectedLanguage">
+      <option value="en">English</option>
+      <option value="ar">Arabic</option>
+    </select>
+  </div>
+</mat-toolbar>

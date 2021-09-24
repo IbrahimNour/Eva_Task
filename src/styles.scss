@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/variable.scss";
+
+html[dir="ltr"] {
+  mat-drawer-content {
+    margin-right: 0 !important;
+  }
+  font-family: "Poppins", sans-serif;
+}
+
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+  mat-drawer-content {
+    margin-left: 0 !important;
+    margin-right: 250px;
+  }
+}
+body {
+  padding: 0;
+  margin: 0;
+}
