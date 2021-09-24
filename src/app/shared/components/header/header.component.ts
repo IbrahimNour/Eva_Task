@@ -15,24 +15,26 @@ export class HeaderComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document
   ) {}
 
-  selectedLanguage: string = 'en';
+  selectedLanguage!: string | null;
 
   ngOnInit(): void {
+    localStorage.getItem('lang')
+      ? (this.selectedLanguage = localStorage.getItem('lang'))
+      : (this.selectedLanguage = 'en');
 
-    this.onLanguageChange()
+    this.onLanguageChange();
   }
 
   onLanguageChange(): void {
-    this.selectedLanguage =
-      localStorage.getItem('lang') || this.translate.defaultLang;
     const htmlTag = this.document.getElementsByTagName(
       'html'
     )[0] as HTMLHtmlElement;
     htmlTag.dir = this.selectedLanguage === 'ar' ? 'rtl' : 'ltr';
-    htmlTag.lang = this.selectedLanguage;
+    htmlTag.lang = this.selectedLanguage!;
     this.document.body.className =
       this.selectedLanguage === 'ar' ? 'body__Ar' : 'body__En';
-    localStorage.setItem('lang', this.selectedLanguage);
-    this.translate.use(this.selectedLanguage);
+    alert(this.selectedLanguage);
+    localStorage.setItem('lang', this.selectedLanguage!);
+    this.translate.use(this.selectedLanguage!);
   }
 }

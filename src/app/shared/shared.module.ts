@@ -25,7 +25,11 @@ const COMPONENTS = [HeaderComponent, FooterComponent];
 
 @NgModule({
   declarations: [...COMPONENTS, NotFoundComponent],
-  imports: [CommonModule, ...MATERIAL_MODULES, TranslateModule],
+  imports: [
+    CommonModule,
+    ...MATERIAL_MODULES,
+    TranslateModule.forChild({ extend: true }),
+  ],
   exports: [...MATERIAL_MODULES, ...COMPONENTS, TranslateModule],
 })
 export class SharedModule {}
