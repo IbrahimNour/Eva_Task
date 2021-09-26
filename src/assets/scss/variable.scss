@@ -3,6 +3,7 @@
 $light-color: #fff;
 $dark-color: #0f183e;
 $ligheter-color: #5c699e;
+$background-color: #fcfcfc;
 
 //PRIMARY THEME
 $mat-primary: (
@@ -62,9 +63,11 @@ $devotana-light-theme: mat-light-theme(
 //$theme: mat-light-theme($primary,$accent,$warn);
 
 @import "../../app/landing-page/landing-page-theme.scss";
+@import "../../app/shared/components/footer/footer-theme.scss";
 
 @mixin componnent-theme($theme) {
   @include landing-page-theme($theme);
+  @include footer-component($theme);
 }
 @include angular-material-theme($devotana-light-theme);
 @include componnent-theme($devotana-light-theme);

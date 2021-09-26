@@ -8,6 +8,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/pages.module').then((m) => m.PagesModule),
   },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./authentication/authentication.module').then(
+        (m) => m.AuthenticationModule
+      ),
+  },
   { path: '404', component: NotFoundComponent },
   {
     path: '**',

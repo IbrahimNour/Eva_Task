@@ -37,5 +37,40 @@
         }
       }
     }
+
+    .features {
+      width: 100%;
+      h1 {
+        font-size: 30px;
+        color: $dark-color;
+      }
+      button {
+        color: #fff;
+        margin: 20px 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        img {
+          width: 25px;
+        }
+        &:first-child {
+          margin: 0;
+        }
+        @media (max-width: 767px) {
+          margin: 20px 0;
+        }
+      }
+    }
+
+    .feature-card {
+      background-color: $background-color;
+      box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
+      margin: 10px 0;
+      p {
+      }
+      span {
+        font-size: 25px;
+        color: $dark-color;
+      }
+    }
   }
 }
