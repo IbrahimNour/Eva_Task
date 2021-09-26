@@ -1,26 +1,26 @@
-@import 'themes.scss';
+@import "themes.scss";
 
 $light-color: #fff;
 $dark-color: #0f183e;
+$ligheter-color: #5c699e;
 
-//PRIMARY THEME 
+//PRIMARY THEME
 $mat-primary: (
-    main: #0f183e,
-    lighter: #c5cae3,
-    darker: #0f183e,
-    200: #3d4fa1,
+  main: #0f183e,
+  lighter: #586fe4,
+  darker: #0f183e,
+  200: #3d4fa1,
   // For slide toggle,
   contrast:
-  (
-    main: $light-color,
-    lighter: $dark-color,
-    darker: $light-color,
-  ),
+    (
+      main: $light-color,
+      lighter: $dark-color,
+      darker: $light-color,
+    ),
 );
 $theme-primary: mat-palette($mat-primary, main, lighter, darker);
 
-
-//ACCENT THEME 
+//ACCENT THEME
 $mat-accent: (
   main: #cf484f,
   lighter: #f4c7db,
@@ -53,7 +53,18 @@ $mat-warn: (
 );
 $theme-warn: mat-palette($mat-warn, main, lighter, darker);
 
-$devotana-light-theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
+$devotana-light-theme: mat-light-theme(
+  $theme-primary,
+  $theme-accent,
+  $theme-warn
+);
 
 //$theme: mat-light-theme($primary,$accent,$warn);
+
+@import "../../app/landing-page/landing-page-theme.scss";
+
+@mixin componnent-theme($theme) {
+  @include landing-page-theme($theme);
+}
 @include angular-material-theme($devotana-light-theme);
+@include componnent-theme($devotana-light-theme);

@@ -18,9 +18,9 @@ export class HeaderComponent implements OnInit {
   selectedLanguage!: string | null;
 
   ngOnInit(): void {
-    localStorage.getItem('lang')
-      ? (this.selectedLanguage = localStorage.getItem('lang'))
-      : (this.selectedLanguage = 'en');
+    this.translate.setDefaultLang(localStorage.getItem('lang') ?? 'en');
+    this.selectedLanguage =
+      localStorage.getItem('lang') ?? this.translate.defaultLang;
 
     this.onLanguageChange();
   }
@@ -33,7 +33,6 @@ export class HeaderComponent implements OnInit {
     htmlTag.lang = this.selectedLanguage!;
     this.document.body.className =
       this.selectedLanguage === 'ar' ? 'body__Ar' : 'body__En';
-    alert(this.selectedLanguage);
     localStorage.setItem('lang', this.selectedLanguage!);
     this.translate.use(this.selectedLanguage!);
   }

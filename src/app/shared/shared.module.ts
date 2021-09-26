@@ -28,7 +28,7 @@ const COMPONENTS = [HeaderComponent, FooterComponent];
   imports: [
     CommonModule,
     ...MATERIAL_MODULES,
-    TranslateModule.forChild({ extend: true }),
+    TranslateModule.forRoot({ extend: true }),
   ],
   exports: [...MATERIAL_MODULES, ...COMPONENTS, TranslateModule],
 })
