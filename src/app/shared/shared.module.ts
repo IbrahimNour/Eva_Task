@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatInputModule } from '@angular/material/input';
 
 // MATERIAL MODULES
 import { MatButtonModule } from '@angular/material/button';
@@ -12,6 +13,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 const MATERIAL_MODULES = [
   MatButtonModule,
@@ -20,6 +22,8 @@ const MATERIAL_MODULES = [
   FlexLayoutModule,
   MatSelectModule,
   FormsModule,
+  MatInputModule,
+  MatFormFieldModule,
 ];
 const COMPONENTS = [HeaderComponent, FooterComponent];
 

@@ -12,7 +12,6 @@ export class DescriptionComponent implements OnInit {
   ngOnInit(): void {}
 
   handelAuth(): void {
-    console.log('Auth !');
     this.router.navigate(['auth']);
   }
 }
