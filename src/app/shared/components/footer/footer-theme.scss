@@ -16,6 +16,12 @@
           font-weight: 100;
           text-align: justify;
         }
+        .links {
+          cursor: pointer;
+          &:hover {
+            color: $ligheter-color;
+          }
+        }
         ul {
           list-style: none;
           margin: 0;

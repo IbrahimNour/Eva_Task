@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
@@ -37,6 +38,7 @@ const COMPONENTS = [HeaderComponent, FooterComponent];
   imports: [
     CommonModule,
     ...MATERIAL_MODULES,
+    RouterModule,
     CodeInputModule.forRoot({
       codeLength: 6,
       isCharsCode: true,

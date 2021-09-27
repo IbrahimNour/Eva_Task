@@ -13,8 +13,9 @@
       src="../../../../assets/images/LOGO.png"
       alt="Logo.ng"
       title="Devotana"
+      [routerLink]="['/']"
     />
-    <p>Devotana</p>
+    <p [routerLink]="['/']">Devotana</p>
 
     <select (change)="onLanguageChange()" [(ngModel)]="selectedLanguage">
       <option value="en">English</option>

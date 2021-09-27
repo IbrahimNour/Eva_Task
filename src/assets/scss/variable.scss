@@ -65,11 +65,15 @@ $devotana-light-theme: mat-light-theme(
 @import "../../app/landing-page/landing-page-theme.scss";
 @import "../../app/shared/components/footer/footer-theme.scss";
 @import "../../app/authentication/authentication-theme.scss";
+@import "../../app/pages/contact-us/contactUs-theme.scss";
+@import "../../app/pages/home/home-theme.scss";
 
 @mixin componnent-theme($theme) {
   @include landing-page-theme($theme);
   @include footer-component($theme);
   @include auth-component($theme);
+  @include contactUs-component($theme);
+  @include home-component($theme);
 }
 @include angular-material-theme($devotana-light-theme);
 @include componnent-theme($devotana-light-theme);
