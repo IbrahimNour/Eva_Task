@@ -11,9 +11,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatSelectModule } from '@angular/material/select';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatRadioModule } from '@angular/material/radio';
+import { CodeInputModule } from 'angular-code-input';
+import { LacMatTelInputModule } from 'lac-mat-tel-input';
 
 const MATERIAL_MODULES = [
   MatButtonModule,
@@ -24,6 +27,8 @@ const MATERIAL_MODULES = [
   FormsModule,
   MatInputModule,
   MatFormFieldModule,
+  MatRadioModule,
+  LacMatTelInputModule,
 ];
 const COMPONENTS = [HeaderComponent, FooterComponent];
 
@@ -32,8 +37,19 @@ const COMPONENTS = [HeaderComponent, FooterComponent];
   imports: [
     CommonModule,
     ...MATERIAL_MODULES,
+    CodeInputModule.forRoot({
+      codeLength: 6,
+      isCharsCode: true,
+    }),
+    ReactiveFormsModule,
     TranslateModule.forRoot({ extend: true }),
   ],
-  exports: [...MATERIAL_MODULES, ...COMPONENTS, TranslateModule],
+  exports: [
+    ...MATERIAL_MODULES,
+    ...COMPONENTS,
+    TranslateModule,
+    ReactiveFormsModule,
+    CodeInputModule,
+  ],
 })
 export class SharedModule {}

@@ -1,30 +1,38 @@
-<form fxLayout="column" fxLayoutAlign="space-around stretch">
-  <h1>Account Information</h1>
+<form
+  fxLayout="column"
+  fxLayoutAlign="space-around stretch"
+  *ngIf="!switchForms"
+  (submit)="handelTeamSubmitted()"
+  [formGroup]="form"
+>
+  <h1>Create Account</h1>
+  <p>Welcome To Devotana</p>
 
   <mat-form-field appearance="outline">
-    <mat-label>Full Name</mat-label>
-    <input matInput type="text" />
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
   </mat-form-field>
-  <mat-form-field appearance="outline">
-    <mat-label>Gender</mat-label>
-    <mat-select>
-      <mat-option value="one">Male</mat-option>
-      <mat-option value="two">Female</mat-option>
-    </mat-select>
+
+  <mat-form-field>
+    <mat-label>Phone</mat-label>
+    <lac-mat-country-selector
+      matPrefix
+      [selectorFor]="input"
+    ></lac-mat-country-selector>
+    <lac-mat-tel-input #input formControlName="phone"></lac-mat-tel-input>
   </mat-form-field>
-  <mat-form-field appearance="outline">
-    <mat-label>Country</mat-label>
-    <mat-select>
-      <mat-option value="one">Male</mat-option>
-      <mat-option value="two">Female</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <mat-form-field appearance="outline">
-    <mat-label>City</mat-label>
-    <mat-select>
-      <mat-option value="one">Male</mat-option>
-      <mat-option value="two">Female</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <button mat-raised-button color="primary" class="login">Next</button>
+
+  <button mat-raised-button color="primary" class="next" type="submit">
+    Sign Up
+  </button>
+  <p (click)="handelLogin()">Already Have Account? <a>Login</a></p>
 </form>

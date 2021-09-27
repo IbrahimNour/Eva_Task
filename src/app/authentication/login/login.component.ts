@@ -18,4 +18,8 @@ export class LoginComponent implements OnInit {
   onHandelRegister(): void {
     this.router.navigate(['./register'], { relativeTo: this.route });
   }
+
+  handelForgetPassword(): void {
+    this.router.navigate(['./forget-password'], { relativeTo: this.route });
+  }
 }

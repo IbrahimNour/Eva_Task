@@ -1,3 +1,6 @@
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { AccountInformationComponent } from './account-information/account-information.component';
 import { VerficationCodeComponent } from './verfication-code/verfication-code.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -22,6 +25,12 @@ const routes: Routes = [
         path: 'verfication',
         component: VerficationCodeComponent,
       },
+      {
+        path: 'account-information',
+        component: AccountInformationComponent,
+      },
+      { path: 'forget-password', component: ForgetPasswordComponent },
+      { path: 'reset-password', component: ResetPasswordComponent },
     ],
   },
 ];
