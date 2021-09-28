@@ -1,0 +1,44 @@
+@mixin home-content-component($theme) {
+  app-home-content {
+    .home-content {
+      padding: 40px 20px;
+    }
+    .mat-tab-list {
+      background-color: $dark-color;
+    }
+    .mat-tab-label {
+      margin: 0 5px;
+      color: #fff;
+    }
+    .mat-tab-label-active {
+      color: #fff !important;
+    }
+    .mat-tab-header {
+      border-bottom: none;
+    }
+    .match-card {
+      margin: 20px 0;
+      background-color: #dee4ff;
+      padding: 20px 40px;
+      p {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 25px;
+        .time {
+          color: red;
+        }
+        .league {
+          color: $dark-color;
+        }
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+        }
+      }
+    }
+  }
+}

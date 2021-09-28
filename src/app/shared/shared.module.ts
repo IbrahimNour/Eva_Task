@@ -18,6 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
 import { CodeInputModule } from 'angular-code-input';
 import { LacMatTelInputModule } from 'lac-mat-tel-input';
+import { MatTabsModule } from '@angular/material/tabs';
 
 const MATERIAL_MODULES = [
   MatButtonModule,
@@ -30,6 +31,7 @@ const MATERIAL_MODULES = [
   MatFormFieldModule,
   MatRadioModule,
   LacMatTelInputModule,
+  MatTabsModule,
 ];
 const COMPONENTS = [HeaderComponent, FooterComponent];
 

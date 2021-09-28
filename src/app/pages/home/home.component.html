@@ -1,10 +1,24 @@
-<section class="home" fxLayout="row" fxLayoutAlign="space-between start">
+<section class="home">
   <div class="container">
-    <app-navbar fxFlex="20"></app-navbar>
-    <div class="modules" fxFlex="60">
-      <p>Routing here !</p>
-      <router-outlet></router-outlet>
+    <div
+      fxLayout="row wrap"
+      fxLayoutAlign="start center"
+      fxLayout.xs="column wrap"
+      fxLayoutAlign.xs="space-around stretch"
+      fxLayout.sm="column wrap"
+      fxLayoutAlign.sm="space-around stretch"
+      fxLayout.md="row wrap"
+      fxLayoutAlign.md="start center"
+    >
+      <app-navbar fxFlex="20%" fxFlex.md="25%"></app-navbar>
+      <div class="modules" fxFlex="60%" fxFlex.md="75%" class="center-content">
+        <router-outlet></router-outlet>
+      </div>
+      <app-advertising
+        fxFlex="20%"
+        fxHide.md="true"
+        fxHide.sm="true"
+      ></app-advertising>
     </div>
-    <app-advertising fxFlex="20"></app-advertising>
   </div>
 </section>

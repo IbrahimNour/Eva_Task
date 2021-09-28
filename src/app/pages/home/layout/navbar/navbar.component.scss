@@ -7,12 +7,24 @@ nav {
   ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0 20px;
     li {
       width: 100%;
-      background-color: red;
-      margin: 10px 0;
-      border-bottom: 1px solid #dee4ff;
+      margin: 5px 0;
+      border-bottom: 1px solid #fff;
+      padding: 10px 0;
+      cursor: pointer;
+      color: #0f183e;
+      &:hover {
+        color: #5c699e;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+      img {
+        width: 30px;
+        margin: 0 10px;
+      }
     }
   }
 }
