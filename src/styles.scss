@@ -27,6 +27,25 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+
+.mat-tab-list {
+  background-color: #efefef;
+  opacity: 1;
+}
+.mat-tab-label {
+  margin: 0 5px;
+  color: $dark-color;
+  opacity: 1 !important;
+}
+.mat-tab-label-active {
+  color: #fff !important;
+  background-color: $dark-color;
+  opacity: 1;
+  border-bottom: 1px solid $ligheter-color;
+}
+.mat-tab-header {
+  border-bottom: none;
+}
 @media (min-width: 768px) {
   .container {
     width: 750px;

@@ -11,9 +11,12 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () =>
-          import('../landing-page/landing-page.module').then(
-            (m) => m.LandingPageModule
-          ),
+          import('./home/home.module').then((m) => m.HomeModule),
+      },
+      {
+        path: 'leagues',
+        loadChildren: () =>
+          import('./leagues/leagues.module').then((m) => m.LeaguesModule),
       },
       {
         path: 'contactUs',
@@ -21,11 +24,6 @@ const routes: Routes = [
           import('./contact-us/contact-us.module').then(
             (m) => m.ContactUsModule
           ),
-      },
-      {
-        path: 'home',
-        loadChildren: () =>
-          import('./home/home.module').then((m) => m.HomeModule),
       },
     ],
   },

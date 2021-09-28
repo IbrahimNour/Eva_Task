@@ -1,0 +1,27 @@
+ul {
+  padding-bottom: 20px !important;
+  border-bottom: 1px solid #fff;
+}
+
+.match-card {
+  padding-bottom: 0 !important;
+}
+
+.match-detail {
+  margin: 0;
+  padding: 0 !important;
+  padding-bottom: 0 !important;
+  padding: 20px 0 !important;
+  li {
+    margin: 0;
+    padding: 0;
+    p {
+      margin: 0 !important;
+      padding: 0 !important;
+      margin: 0 5px !important;
+    }
+    img {
+      width: 20px;
+    }
+  }
+}

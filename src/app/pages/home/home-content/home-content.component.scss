@@ -1,28 +1,18 @@
 @mixin home-content-component($theme) {
   app-home-content {
     .home-content {
-      padding: 40px 20px;
-    }
-    .mat-tab-list {
-      background-color: $dark-color;
-    }
-    .mat-tab-label {
-      margin: 0 5px;
-      color: #fff;
-    }
-    .mat-tab-label-active {
-      color: #fff !important;
-    }
-    .mat-tab-header {
-      border-bottom: none;
+      padding: 0 20px;
     }
     .match-card {
-      margin: 20px 0;
+      margin: 20px auto;
       background-color: #dee4ff;
-      padding: 20px 40px;
+      padding: 20px 0;
+      width: 80%;
+      border-radius: 10px;
       p {
         margin: 0;
         padding: 0;
+        padding: 0 20px;
         margin-bottom: 25px;
         .time {
           color: red;
@@ -37,6 +27,23 @@
         padding: 0;
         list-style: none;
         li {
+        }
+      }
+
+      .predict-match {
+        background-color: $dark-color;
+        padding: 15px;
+        color: #fff;
+        transition: all 0.5s;
+        cursor: pointer;
+        border-radius: 0 0 10px 10px;
+
+        &:hover {
+          background-color: #182a77;
+        }
+        h1 {
+          margin: 0;
+          padding: 0;
         }
       }
     }

@@ -19,6 +19,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { CodeInputModule } from 'angular-code-input';
 import { LacMatTelInputModule } from 'lac-mat-tel-input';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 const MATERIAL_MODULES = [
   MatButtonModule,
@@ -32,6 +33,7 @@ const MATERIAL_MODULES = [
   MatRadioModule,
   LacMatTelInputModule,
   MatTabsModule,
+  MatExpansionModule,
 ];
 const COMPONENTS = [HeaderComponent, FooterComponent];
 

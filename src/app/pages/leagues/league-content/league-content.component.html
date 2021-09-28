@@ -1,0 +1,18 @@
+<section class="league-content">
+  <mat-tab-group mat-align-tabs="center" [selectedIndex]="1">
+    <mat-tab label="Finished"> </mat-tab>
+    <mat-tab label="Ongoing" active="true"> </mat-tab>
+    <mat-tab label="Upcoming"> </mat-tab>
+  </mat-tab-group>
+
+  <div
+    class="league-content__statistic"
+    fxLayout="row"
+    fxLayoutAlign="center center"
+  >
+    <img src="../../../../assets/images/statistic.png" />
+    <p>View Statistics</p>
+  </div>
+
+  <app-league-card></app-league-card>
+</section>

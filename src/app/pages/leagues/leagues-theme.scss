@@ -1,0 +1,45 @@
+@mixin leagues-component($theme) {
+  app-leagues {
+    .league-content {
+      height: 100%;
+      &__statistic {
+        background-color: $dark-color;
+        margin: 20px 0;
+        padding: 15px 0;
+        cursor: pointer;
+        border-radius: 10px;
+        img {
+          width: 30px;
+        }
+        p {
+          color: $light-color;
+          margin: 0 10px;
+        }
+      }
+    }
+    .league-card {
+      p {
+        font-size: 20px;
+        color: $dark-color;
+      }
+      ul {
+        list-style: none;
+        li {
+          margin: 0 10px;
+          font-size: 20px;
+          color: $dark-color;
+        }
+      }
+      .league-card-footer {
+        background-color: $dark-color;
+        color: #fff;
+        padding: 5px 0;
+        text-align: center;
+        cursor: pointer;
+      }
+      .mat-expansion-panel-body {
+        padding: 0;
+      }
+    }
+  }
+}

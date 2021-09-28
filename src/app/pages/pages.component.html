@@ -1,3 +1,25 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
+<div class="container">
+  <div
+    fxLayout="row wrap"
+    fxLayoutAlign="space-between start"
+    fxLayout.xs="column wrap"
+    fxLayoutAlign.xs="space-around stretch"
+    fxLayout.sm="column wrap"
+    fxLayoutAlign.sm="space-around stretch"
+    fxLayout.md="row wrap"
+    fxLayoutAlign.md="start center"
+    class="pages-content"
+  >
+    <app-navbar fxFlex="20%" fxFlex.md="25%"></app-navbar>
+    <div fxFlex="60%" fxFlex.md="75%" class="center-content">
+      <router-outlet></router-outlet>
+    </div>
+    <app-advertising
+      fxFlex="20%"
+      fxHide.md="true"
+      fxHide.sm="true"
+    ></app-advertising>
+  </div>
+</div>
 <app-footer></app-footer>
