@@ -20,6 +20,7 @@ import { CodeInputModule } from 'angular-code-input';
 import { LacMatTelInputModule } from 'lac-mat-tel-input';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { NgxNumberSpinnerModule } from 'ngx-number-spinner';
 
 const MATERIAL_MODULES = [
   MatButtonModule,
@@ -34,6 +35,7 @@ const MATERIAL_MODULES = [
   LacMatTelInputModule,
   MatTabsModule,
   MatExpansionModule,
+  NgxNumberSpinnerModule,
 ];
 const COMPONENTS = [HeaderComponent, FooterComponent];
 

@@ -69,6 +69,7 @@ $devotana-light-theme: mat-light-theme(
 @import "../../app/pages/home/home-theme.scss";
 @import "../../app/pages/home/home-content/home-content.component.scss";
 @import "../../app/pages/leagues/leagues-theme.scss";
+@import "../../app/pages/leagues/league-standings/league-standings-theme.scss";
 
 @mixin componnent-theme($theme) {
   @include landing-page-theme($theme);
@@ -78,6 +79,7 @@ $devotana-light-theme: mat-light-theme(
   @include home-component($theme);
   @include home-content-component($theme);
   @include leagues-component($theme);
+  @include league-standing-component($theme);
 }
 @include angular-material-theme($devotana-light-theme);
 @include componnent-theme($devotana-light-theme);

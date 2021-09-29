@@ -1,0 +1,60 @@
+<section class="standings-predictions">
+  <h1>Predict The Match score</h1>
+  <div
+    class="standings-predictions__predict"
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+  >
+    <div fxLayout="column" fxLayoutAlign="space-around center">
+      <ngx-number-spinner (change)="changeFirst($event)" [min]="0">
+      </ngx-number-spinner>
+      <span>Al-Ahly</span>
+    </div>
+
+    <div fxLayout="column" fxLayoutAlign="space-around center">
+      <ngx-number-spinner (change)="changeSecond($event)" [min]="0">
+      </ngx-number-spinner>
+      <span>Al-Helal</span>
+    </div>
+  </div>
+
+  <div fxLayout="column" fxLayoutAlign="space-around stretch">
+    <h1>standings-predictions</h1>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Predict the information</mat-label>
+      <mat-select>
+        <mat-option> 4-4-2 </mat-option>
+        <mat-option> 4-4-3 </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div fxLayout="column" fxLayoutAlign="space-around stretch">
+    <h1>Predict who will Score Goals</h1>
+    <mat-form-field appearance="legacy">
+      <mat-label>Al-Ahli</mat-label>
+      <mat-select multiple>
+        <mat-option>Ahmed</mat-option>
+        <mat-option>Ibrahim</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Al-Helal</mat-label>
+      <mat-select multiple>
+        <mat-option>Ahmed</mat-option>
+        <mat-option>Ibrahim</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="standings-predictions__stadium">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <h1>Predict the Line-up:</h1>
+      <button mat-raised-button class="edit">Edit</button>
+    </div>
+    <img src="../../../../../assets/images/Mask Group 850.png" />
+  </div>
+  <button mat-raised-button color="primary" class="submitted">Submit</button>
+</section>

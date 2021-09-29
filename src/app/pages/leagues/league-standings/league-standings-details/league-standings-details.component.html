@@ -1,0 +1,48 @@
+<div class="standing-detail">
+  <div class="standing-detail__info">
+    <ul>
+      <li fxLayout="row" fxLayoutAlign="start center">
+        <span>Date: </span>
+        <p>Tue, 12 May 2021 8:00 PM</p>
+      </li>
+      <li fxLayout="row" fxLayoutAlign="start center">
+        <span>Place: </span>
+        <p>King Stadium</p>
+      </li>
+      <li fxLayout="row" fxLayoutAlign="start center">
+        <span>Competition: </span>
+        <p>King Abdul-Aziz Cup</p>
+      </li>
+    </ul>
+  </div>
+
+  <div
+    class="standing-detail__asking"
+    fxLayout="column"
+    fxLayoutAlign="space-between start"
+  >
+    <h1>Are you going to watch the match?</h1>
+    <mat-radio-group
+      fxLayout="column"
+      fxLayoutAlign="space-between start"
+      color="primary"
+    >
+      <mat-radio-button value="auto">Yes</mat-radio-button>
+      <mat-radio-button value="always">No</mat-radio-button>
+    </mat-radio-group>
+
+    <hr />
+    <h1>Where are going to watch it?</h1>
+    <mat-radio-group
+      fxLayout="column"
+      fxLayoutAlign="space-between start"
+      color="primary"
+    >
+      <mat-radio-button value="staduim">At the stadium</mat-radio-button>
+      <mat-radio-button value="home">At home</mat-radio-button>
+      <mat-radio-button value="other">Other</mat-radio-button>
+    </mat-radio-group>
+
+    <button mat-raised-button color="primary">Send</button>
+  </div>
+</div>

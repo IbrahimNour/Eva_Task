@@ -1,19 +1,25 @@
 <nav>
   <ul>
-    <li fxLayout="row" fxLayoutAlign="start center">
+    <li
+      fxLayout="row"
+      fxLayoutAlign="start center"
+      [routerLink]="['./']"
+      routerLinkActive="active"
+    >
       <img src="../../../../../assets/images/home.png" /> home
     </li>
-    <li fxLayout="row" fxLayoutAlign="start center">
+    <li fxLayout="row" fxLayoutAlign="start center" routerLinkActive="active">
       <img src="../../../../../assets/images/chat_audio.png" /> Voice Rooms
     </li>
     <li
       fxLayout="row"
       fxLayoutAlign="start center"
       [routerLink]="['./leagues']"
+      routerLinkActive="active"
     >
       <img src="../../../../../assets/images/league.png" />Leagues
     </li>
-    <li fxLayout="row" fxLayoutAlign="start center">
+    <li fxLayout="row" fxLayoutAlign="start center" routerLinkActive="active">
       <img src="../../../../../assets/images/profile.png" />Profile
     </li>
   </ul>

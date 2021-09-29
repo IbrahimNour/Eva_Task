@@ -1,3 +1,4 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeagueCardComponent implements OnInit {
   panelOpenState!: boolean;
-  constructor() {}
+  constructor(private router: Router, private readonly route: ActivatedRoute) {}
 
   ngOnInit(): void {}
+
+  handelStandingsLoad(): void {
+    this.router.navigate(['./standings'], { relativeTo: this.route });
+  }
 }
