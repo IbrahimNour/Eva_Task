@@ -12,11 +12,6 @@ const routes: Routes = [
         path: '',
         component: HomeContentComponent,
       },
-      // {
-      //   path: 'leagues',
-      //   loadChildren: () =>
-      //     import('../leagues/leagues.module').then((m) => m.LeaguesModule),
-      // },
     ],
   },
 ];

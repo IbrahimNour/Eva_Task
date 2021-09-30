@@ -1,0 +1,27 @@
+<section class="rate-record">
+  <h1>{{ headingType }}</h1>
+  <div class="rate-record__card" fxLayout="row" fxLayoutAlign="start center">
+    <img src="../../../../../assets/images/Ellipse 11.png" alt="" title="" />
+    <div
+      fxLayout="column"
+      fxLayoutAlign="center start"
+      class="rate-record__card__info"
+    >
+      <p>Mohamed Ali</p>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <span style="color: red">0</span>
+        <mat-slider
+          thumbLabel
+          tickInterval="1000"
+          step="1"
+          min="1"
+          max="8"
+          aria-label="units"
+          color="primary"
+        ></mat-slider>
+        <span style="color: green">8</span>
+      </div>
+    </div>
+  </div>
+  <button mat-raised-button color="primary" class="submitted">Submit</button>
+</section>

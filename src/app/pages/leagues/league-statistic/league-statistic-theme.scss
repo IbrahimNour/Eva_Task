@@ -1,0 +1,30 @@
+@mixin league-statistic-component($theme) {
+  app-league-statistic {
+    .league-statics {
+      background-color: #efefef;
+      border-radius: 2.5px;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
+      padding: 20px;
+      h1 {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+        color: $dark-color;
+      }
+      .mat-tab-header .mat-tab-labels {
+        border: 1px solid #ccc;
+      }
+      span {
+        color: red;
+        display: block;
+        margin: 20px 0;
+        font-size: 14px;
+        font-weight: 100;
+      }
+      table {
+        width: 100%;
+      }
+    }
+  }
+}

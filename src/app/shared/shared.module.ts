@@ -21,6 +21,8 @@ import { LacMatTelInputModule } from 'lac-mat-tel-input';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { NgxNumberSpinnerModule } from 'ngx-number-spinner';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatTableModule } from '@angular/material/table';
 
 const MATERIAL_MODULES = [
   MatButtonModule,
@@ -36,6 +38,8 @@ const MATERIAL_MODULES = [
   MatTabsModule,
   MatExpansionModule,
   NgxNumberSpinnerModule,
+  MatSliderModule,
+  MatTableModule,
 ];
 const COMPONENTS = [HeaderComponent, FooterComponent];
 

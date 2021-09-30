@@ -1,27 +1,47 @@
-<section class="standings">
+<section class="league-standings">
+  <h1>Standings</h1>
   <div
-    class="standings__cover"
-    fxLayout="column"
-    fxLayoutAlign="center stretch"
+    class="league-standings__desc"
+    fxLayout="row"
+    fxLayoutAlign="start center"
   >
-    <ul fxLayout="row" fxLayoutAlign="space-around center">
-      <li>Al-Ahly</li>
-      <li>-</li>
-      <li>Al-Helal</li>
-    </ul>
+    <img src="../../../../assets/images/league.png" />
+    <p>Prime League 2021</p>
   </div>
+  <table
+    mat-table
+    [dataSource]="dataSource"
+    multiTemplateDataRows
+    class="mat-elevation-z8"
+  >
+    <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
 
-  <mat-tab-group mat-align-tabs="center" [selectedIndex]="0">
-    <mat-tab label="Details">
-      <app-league-standings-details></app-league-standings-details>
-    </mat-tab>
-    <mat-tab label="Predictions" active="true">
-      <app-league-standings-predictions></app-league-standings-predictions>
-    </mat-tab>
-    <mat-tab label="Rates">
-      <app-league-standings-rates></app-league-standings-rates>
-    </mat-tab>
-  </mat-tab-group>
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef>No.</th>
+      <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef>Weight</th>
+      <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef>Symbol</th>
+      <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
 </section>
-
-<router-outlet></router-outlet>

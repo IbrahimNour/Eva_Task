@@ -4,7 +4,7 @@ import { NotFoundComponent } from './shared/components/not-found/not-found.compo
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'landing-page',
     loadChildren: () =>
       import('./landing-page/landing-page.module').then(
         (m) => m.LandingPageModule
@@ -23,6 +23,7 @@ const routes: Routes = [
       ),
   },
   { path: '404', component: NotFoundComponent },
+  { path: '', redirectTo: 'landing-page', pathMatch: 'full' },
   {
     path: '**',
     redirectTo: '/404',
@@ -30,7 +31,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'top',
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

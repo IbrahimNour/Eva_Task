@@ -1,26 +1,19 @@
 <nav>
   <ul>
-    <li
-      fxLayout="row"
-      fxLayoutAlign="start center"
-      [routerLink]="['./']"
-      routerLinkActive="active"
-    >
-      <img src="../../../../../assets/images/home.png" /> home
+    <li fxLayout="row" fxLayoutAlign="start center">
+      <img src="../../../../../assets/images/home.png" />
+      <a [routerLink]="['./']" routerLinkActive="active">home</a>
     </li>
     <li fxLayout="row" fxLayoutAlign="start center" routerLinkActive="active">
       <img src="../../../../../assets/images/chat_audio.png" /> Voice Rooms
     </li>
-    <li
-      fxLayout="row"
-      fxLayoutAlign="start center"
-      [routerLink]="['./leagues']"
-      routerLinkActive="active"
-    >
-      <img src="../../../../../assets/images/league.png" />Leagues
+    <li fxLayout="row" fxLayoutAlign="start center">
+      <img src="../../../../../assets/images/league.png" />
+      <a [routerLink]="['./leagues']" routerLinkActive="active">Leagues</a>
     </li>
     <li fxLayout="row" fxLayoutAlign="start center" routerLinkActive="active">
-      <img src="../../../../../assets/images/profile.png" />Profile
+      <img src="../../../../../assets/images/profile.png" />
+      <a>Profile</a>
     </li>
   </ul>
 </nav>

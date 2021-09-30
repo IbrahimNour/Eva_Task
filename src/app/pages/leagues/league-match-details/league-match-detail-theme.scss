@@ -1,0 +1,167 @@
+@mixin league-match-detail-component($theme) {
+  app-league-match-detail {
+    .standings {
+      width: 100%;
+      display: inline-block;
+      &__cover {
+        width: 100%;
+        min-height: 250px;
+        display: inline-block;
+        position: relative;
+        background: url("../../../../assets/images/footer.webp") no-repeat
+          center center;
+        background-size: cover;
+        ul {
+          list-style: none;
+          color: #fff;
+          margin: 0;
+          padding: 0;
+          z-index: 99999999999;
+        }
+      }
+      .mat-tab-group {
+        margin-top: -2px;
+      }
+    }
+    .standing-detail {
+      padding: 0 3px;
+      background: #fff;
+      border-radius: 2.5px;
+      margin: 10px 0;
+      &__info {
+        box-shadow: 0 0 0 2px #f7f7f7;
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          padding: 10px 30px;
+          li {
+            margin: 10px 0;
+            color: $ligheter-color;
+            border-bottom: 1px solid #ccc;
+            &:last-child {
+              border-bottom: 0;
+            }
+            span {
+              color: $dark-color;
+              padding: 0 20px;
+            }
+          }
+        }
+      }
+      &__asking {
+        padding: 10px 0;
+        box-shadow: 0 0 0 2px #f7f7f7;
+        padding: 20px;
+        margin: 20px 0;
+        .mat-radio-button {
+          padding: 10px 0;
+        }
+        button {
+          margin: 20px 0;
+        }
+      }
+    }
+    .standings-predictions {
+      padding: 5px 20px;
+      box-shadow: 0 0 0 2px #f7f7f7;
+      width: 95%;
+      margin: 10px auto;
+      h1 {
+        color: $dark-color;
+        font-weight: 400;
+      }
+      &__predict {
+        h1 {
+          color: $dark-color;
+          font-weight: 400;
+          font-size: 25px;
+        }
+        padding: 0 40px;
+        span {
+          margin: 10px 0;
+          color: $ligheter-color;
+        }
+      }
+      &__stadium {
+        min-height: 300px;
+        img {
+          width: 60%;
+          height: 100%;
+          margin: 0 auto;
+          display: block;
+          @media (max-width: 767px) {
+            img {
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+
+    .rates {
+      padding: 5px 20px;
+      box-shadow: 0 0 0 2px #f7f7f7;
+      width: 95%;
+      margin: 10px auto;
+      &__card {
+        width: 112.5px;
+        height: 250px;
+        margin: 10px 40px;
+        border-radius: 2.5px;
+        border: solid 0.3px #d5d5d5;
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 150px;
+        }
+        p {
+          font-size: 20px;
+          margin: 0;
+          padding: 0;
+          padding: 20px 0;
+          margin: 10px 0;
+          @media (max-width: 767px) {
+            font-size: 18px;
+          }
+          @media (min-width: 768px) and (max-width: 991px) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .rate-record {
+      padding: 20px;
+      background-color: $light-color;
+      box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.16);
+      height: 100%;
+      h1 {
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+        color: $dark-color;
+        font-size: 20px;
+      }
+      &__card {
+        background-color: #f1f1f1;
+        padding: 10px;
+        margin: 20px 0;
+        border-radius: 10px;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
+        &__info {
+          padding: 0 20px;
+          p {
+            margin: 0;
+            padding: 0;
+          }
+          span {
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+  }
+}

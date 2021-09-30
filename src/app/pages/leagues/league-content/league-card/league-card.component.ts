@@ -15,4 +15,8 @@ export class LeagueCardComponent implements OnInit {
   handelStandingsLoad(): void {
     this.router.navigate(['./standings'], { relativeTo: this.route });
   }
+
+  handelDetailMatch(): void {
+    this.router.navigate(['./match-detail'], { relativeTo: this.route });
+  }
 }

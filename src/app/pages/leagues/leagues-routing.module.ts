@@ -2,6 +2,8 @@ import { LeagueContentComponent } from './league-content/league-content.componen
 import { LeaguesComponent } from './leagues.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LeagueStatisticComponent } from './league-statistic/league-statistic.component';
+import { LeagueStandingsComponent } from './league-standings/league-standings.component';
 
 const routes: Routes = [
   {
@@ -10,11 +12,19 @@ const routes: Routes = [
     children: [
       { path: '', component: LeagueContentComponent },
       {
-        path: 'standings',
+        path: 'match-detail',
         loadChildren: () =>
-          import('./league-standings/league-standings.module').then(
-            (m) => m.LeagueStandingsModule
+          import('./league-match-details/league-match-detail.module').then(
+            (m) => m.LeagueMatchDetailModule
           ),
+      },
+      {
+        path: 'standings',
+        component: LeagueStandingsComponent,
+      },
+      {
+        path: 'statistic',
+        component: LeagueStatisticComponent,
       },
     ],
   },

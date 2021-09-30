@@ -1,0 +1,10 @@
+mat-slider {
+  width: 500px;
+  @media (max-width: 767px) {
+    width: 200px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    width: 300px;
+  }
+}
