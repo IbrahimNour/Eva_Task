@@ -1,4 +1,8 @@
-<mat-toolbar color="primary">
+<mat-toolbar
+  color="primary"
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+>
   <!-- <button
     mat-icon-button
     class="example-icon"
@@ -21,5 +25,19 @@
       <option value="en">English</option>
       <option value="ar">Arabic</option>
     </select>
+  </div>
+
+  <div class="user-actions" fxLayout="row" fxLayoutAlign="center center">
+    <mat-icon>search</mat-icon>
+    <mat-icon style="margin: 0 10px">notifications</mat-icon>
+    <button mat-button [matMenuTriggerFor]="menu" class="menu">
+      <img src="../../../../assets/images/personal.jpeg" alt="" title="" />
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Account Settings</button>
+      <button mat-menu-item>LeaderBoard</button>
+      <button mat-menu-item>Statistics</button>
+      <button mat-menu-item>LogOut</button>
+    </mat-menu>
   </div>
 </mat-toolbar>

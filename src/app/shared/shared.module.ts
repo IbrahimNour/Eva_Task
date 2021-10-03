@@ -23,6 +23,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { NgxNumberSpinnerModule } from 'ngx-number-spinner';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatTableModule } from '@angular/material/table';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatMenuModule } from '@angular/material/menu';
 
 const MATERIAL_MODULES = [
   MatButtonModule,
@@ -40,6 +43,9 @@ const MATERIAL_MODULES = [
   NgxNumberSpinnerModule,
   MatSliderModule,
   MatTableModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatMenuModule,
 ];
 const COMPONENTS = [HeaderComponent, FooterComponent];
 

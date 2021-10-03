@@ -4,6 +4,8 @@ $light-color: #fff;
 $dark-color: #0f183e;
 $ligheter-color: #5c699e;
 $background-color: #fcfcfc;
+$gray-background: #f1f1f1;
+$accent-color: #cf484f;
 
 //PRIMARY THEME
 $mat-primary: (
@@ -72,6 +74,7 @@ $devotana-light-theme: mat-light-theme(
 @import "../../app/pages/leagues/league-match-details/league-match-detail-theme.scss";
 @import "../../app/pages/leagues/league-statistic/league-statistic-theme.scss";
 @import "../../app/pages/leagues/league-standings/league-standings-theme.scss";
+@import "../../app/pages/profile/profile-theme.scss";
 
 @mixin componnent-theme($theme) {
   @include landing-page-theme($theme);
@@ -84,6 +87,7 @@ $devotana-light-theme: mat-light-theme(
   @include league-match-detail-component($theme);
   @include league-statistic-component($theme);
   @include laegue-standigs-component($theme);
+  @include profile-component($theme);
 }
 @include angular-material-theme($devotana-light-theme);
 @include componnent-theme($devotana-light-theme);

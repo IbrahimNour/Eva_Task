@@ -1,0 +1,40 @@
+<section
+  class="profile-verfication"
+  fxLayout="column"
+  fxLayoutAlign="center stretch"
+>
+  <form fxLayout="column" fxLayoutAlign="center stretch">
+    <h1>ID verification</h1>
+    <mat-form-field appearance="outline">
+      <mat-label>ID Number</mat-label>
+      <input matInput placeholder="Placeholder" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Date of Birth</mat-label>
+      <input matInput [matDatepicker]="picker" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary">
+      Date of Birth
+    </button>
+  </form>
+</section>
+
+<div class="profile-verfication__info">
+  <h1 color="accent">Why should I verify my ID?</h1>
+  <ul>
+    <li>
+      1- By verifying your account you will be able to create rooms in the voice
+      chat room
+    </li>
+    <li>
+      2- By verifying your account you will be able to participate in rooms
+      raise your hand to talk
+    </li>
+    <li>
+      3- By verifying your account, Users wil be able to Follow Your account
+    </li>
+  </ul>
+</div>

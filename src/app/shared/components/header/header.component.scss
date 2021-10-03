@@ -24,6 +24,17 @@
   }
 }
 
+.user-actions {
+  img {
+    width: 30px;
+    border-radius: 50%;
+  }
+  .menu {
+    min-width: inherit !important;
+    padding: 0 !important;
+  }
+}
+
 :focus-visible {
   outline: none;
 }
