@@ -1,0 +1,35 @@
+<section
+  class="request-league"
+  fxLayout="column"
+  fxLayoutAlign="center stretch"
+>
+  <h1>request League</h1>
+  <form
+    fxLayout="column"
+    fxLayoutAlign="center stretch"
+    (submit)="handelSubmitted()"
+  >
+    <mat-form-field appearance="outline">
+      <mat-label>Toppings</mat-label>
+      <mat-select multiple>
+        <mat-option>Item 1</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Toppings</mat-label>
+      <mat-select multiple>
+        <mat-option>Item 1</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="actions">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        class="default-btn"
+      >
+        Send
+      </button>
+    </div>
+  </form>
+</section>

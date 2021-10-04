@@ -211,5 +211,72 @@
         }
       }
     }
+    .leaderboard {
+      padding: 40px 0;
+      h1 {
+        margin: 0;
+        padding: 0;
+        color: $dark-color;
+        font-size: 20px;
+        font-weight: 400;
+      }
+      &__topleaders {
+        margin: 40px 0;
+        &__item {
+          border-radius: 2.5px;
+          box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.16);
+          background-color: #dee4ff;
+          padding: 20px;
+          position: relative;
+          text-align: center;
+          .imgRate {
+            position: absolute;
+            top: -35px;
+            left: 38%;
+            width: 60px;
+          }
+          div {
+            margin-top: 30px;
+            padding: 20px 0;
+            img {
+              width: 100px;
+            }
+            p {
+              margin: 0;
+              padding: 0;
+              color: #0f183e;
+              font-size: 20px;
+              margin: 5px 0;
+            }
+            span {
+              color: $accent-color;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      &__leaderboard-card {
+        padding: 10px 30px;
+        background: $gray-background;
+        margin: 10px 0;
+        .info {
+          img {
+            width: 60px;
+          }
+          h1 {
+            color: $dark-color;
+            font-size: 18px;
+            margin: 0 20px;
+          }
+        }
+        div {
+          p {
+            margin: 0;
+            padding: 0;
+            color: $accent-color;
+          }
+        }
+      }
+    }
   }
 }

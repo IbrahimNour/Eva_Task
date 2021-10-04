@@ -34,7 +34,9 @@
       <img src="../../../../assets/images/personal.jpeg" alt="" title="" />
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>Account Settings</button>
+      <button mat-menu-item [routerLink]="['../account-settings']">
+        Account Settings
+      </button>
       <button mat-menu-item>LeaderBoard</button>
       <button mat-menu-item>Statistics</button>
       <button mat-menu-item>LogOut</button>

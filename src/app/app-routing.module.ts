@@ -16,6 +16,13 @@ const routes: Routes = [
       import('./pages/pages.module').then((m) => m.PagesModule),
   },
   {
+    path: 'account-settings',
+    loadChildren: () =>
+      import('./account-settings/account-settings.module').then(
+        (m) => m.AccountSettingsModule
+      ),
+  },
+  {
     path: 'auth',
     loadChildren: () =>
       import('./authentication/authentication.module').then(

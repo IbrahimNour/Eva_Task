@@ -1,0 +1,65 @@
+@mixin account-settings-component($theme) {
+  app-account-settings {
+    section {
+      padding: 40px 0;
+    }
+    .profile-settings {
+      padding: 20px;
+      box-shadow: 0 0 3px 0 #ccc;
+      background-color: $light-color;
+      h1 {
+        margin: 0;
+        padding: 0;
+        color: $dark-color;
+      }
+      form {
+        width: 90%;
+        margin: 30px auto;
+      }
+    }
+    .favourite-team {
+      padding: 20px;
+      box-shadow: 0 0 3px 0 #ccc;
+      background-color: $light-color;
+      h1 {
+        color: $dark-color;
+        font-size: 20px;
+      }
+    }
+    .request-league {
+      padding: 20px;
+      box-shadow: 0 0 3px 0 #ccc;
+      background-color: $light-color;
+      form {
+        width: 70%;
+        margin: 10px auto;
+        @media (max-width: 767px) {
+          form {
+            width: 100%;
+          }
+        }
+        button {
+          padding: 3px 20px;
+        }
+      }
+    }
+    .change-password {
+      padding: 20px;
+      box-shadow: 0 0 3px 0 #ccc;
+      background-color: $light-color;
+      h1 {
+        color: $dark-color;
+        margin: 0;
+        padding: 0;
+      }
+      form {
+        width: 80%;
+        padding: 20px;
+        margin: 20px auto;
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

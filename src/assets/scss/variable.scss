@@ -75,6 +75,7 @@ $devotana-light-theme: mat-light-theme(
 @import "../../app/pages/leagues/league-statistic/league-statistic-theme.scss";
 @import "../../app/pages/leagues/league-standings/league-standings-theme.scss";
 @import "../../app/pages/profile/profile-theme.scss";
+@import "../../app/account-settings/account-settings-theme.scss";
 
 @mixin componnent-theme($theme) {
   @include landing-page-theme($theme);
@@ -88,6 +89,7 @@ $devotana-light-theme: mat-light-theme(
   @include league-statistic-component($theme);
   @include laegue-standigs-component($theme);
   @include profile-component($theme);
+  @include account-settings-component($theme);
 }
 @include angular-material-theme($devotana-light-theme);
 @include componnent-theme($devotana-light-theme);

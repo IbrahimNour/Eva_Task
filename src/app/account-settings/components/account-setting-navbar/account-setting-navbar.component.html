@@ -1,0 +1,21 @@
+<nav>
+  <div class="user-data">
+    <img src="../../../../assets/images/Ellipse 11.png" alt="" title="" />
+    <h1>Ahmed Ali</h1>
+  </div>
+  <ul>
+    <li fxLayout="row" fxLayoutAlign="start center">
+      <a [routerLink]="['./']" routerLinkActive="active">Profile Settings</a>
+    </li>
+    <li fxLayout="row" fxLayoutAlign="start center" routerLinkActive="active">
+      <!-- <img src="../../../../../assets/images/chat_audio.png" /> -->
+      <a [routerLink]="['./favourite-team']">Favorite Teams</a>
+    </li>
+    <li fxLayout="row" fxLayoutAlign="start center">
+      <!-- <img src="../../../../../assets/images/league.png" /> -->
+      <a routerLinkActive="active" [routerLink]="['./change-password']"
+        >Change Password</a
+      >
+    </li>
+  </ul>
+</nav>
