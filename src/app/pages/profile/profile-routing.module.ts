@@ -1,3 +1,4 @@
+import { QuizQuestionsComponent } from './quiz-questions/quiz-questions.component';
 import { ProfileLeadersboardComponent } from './profile-leadersboard/profile-leadersboard.component';
 import { ProfileVerficationComponent } from './profile-verfication/profile-verfication.component';
 import { ProfileDetailsComponent } from './profile-details/profile-details.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
       { path: '', component: ProfileDetailsComponent },
       { path: 'verfication', component: ProfileVerficationComponent },
       { path: 'leaderboard', component: ProfileLeadersboardComponent },
+      { path: 'quiz-questions', component: QuizQuestionsComponent },
     ],
   },
 ];

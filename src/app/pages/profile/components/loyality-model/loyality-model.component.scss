@@ -1,0 +1,15 @@
+.teams {
+  width: 100%;
+  .club {
+    text-align: center;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+}
+
+.active {
+  border-radius: 2.5px;
+  border: solid 1.5px #0f183e;
+  background-color: #dee4ff;
+  padding: 5px;
+}

@@ -1,0 +1,84 @@
+@mixin player-infp-theme($theme) {
+  app-player-info {
+    .player-info {
+      padding: 0 20px;
+      box-shadow: 0 0 3px 0 rgb(0 0 0 / 16%);
+      background: url("../../../assets/images/player-inf0-backg.png") no-repeat
+        top center;
+      background-color: $gray-background;
+      background-size: contain;
+      padding-bottom: 30px;
+      h1 {
+        padding: 0;
+        margin: 0;
+        color: $dark-color;
+      }
+      &__player-avatar {
+        width: 200px;
+        padding: 20px 0;
+        margin: 0 auto;
+        padding-top: 180px;
+        text-align: center;
+        img {
+          width: 100%;
+        }
+        p {
+          color: $dark-color;
+          font-weight: 500;
+          margin: 0;
+          padding: 0;
+          font-size: 20px;
+        }
+      }
+
+      &__details {
+        width: 80%;
+        margin: 0 auto;
+        background-color: #dee4ff;
+        padding: 20px 0;
+        div {
+          text-align: center;
+          p {
+            margin: 0;
+            padding: 0;
+            color: $dark-color;
+            font-size: 20px;
+          }
+          span {
+            margin: 0;
+            padding: 0;
+            color: $dark-color;
+            font-size: 15px;
+          }
+        }
+      }
+
+      &__transfers {
+        h1 {
+          color: $dark-color;
+          font-size: 20px;
+          margin: 20px 0;
+        }
+        .clubs {
+          padding: 20px;
+          background-color: #fff;
+          p {
+            color: $dark-color;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            span {
+              color: #b5b5b5;
+              font-size: 15px;
+            }
+          }
+          span {
+            color: #b5b5b5;
+            font-size: 14px;
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+  }
+}

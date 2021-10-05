@@ -30,6 +30,18 @@ const routes: Routes = [
         loadChildren: () =>
           import('./profile/profile.module').then((m) => m.ProfileModule),
       },
+      {
+        path: 'playerInfo',
+        loadChildren: () =>
+          import('./player-info/player-info.module').then(
+            (m) => m.PlayerInfoModule
+          ),
+      },
+      {
+        path: 'teamInfo',
+        loadChildren: () =>
+          import('./team-info/team-info.module').then((m) => m.TeamInfoModule),
+      },
     ],
   },
 ];

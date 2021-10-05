@@ -125,6 +125,7 @@
         margin: 0;
         padding: 20px 0;
         font-size: 20px;
+        cursor: pointer;
       }
       ul {
         margin: 0;
@@ -276,6 +277,22 @@
             color: $accent-color;
           }
         }
+      }
+    }
+    .qestion {
+      h1 {
+        color: $dark-color;
+        font-size: 25px;
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+      }
+      .question-detail {
+        background-color: $gray-background;
+        padding: 20px;
+        border-radius: 2.5px;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.16);
+        margin: 20px 0;
       }
     }
   }

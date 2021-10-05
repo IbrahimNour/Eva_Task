@@ -10,6 +10,8 @@ import { MyPredictionsComponent } from './profile-details/my-predictions/my-pred
 import { MyTeamsComponent } from './profile-details/my-teams/my-teams.component';
 import { ProfileVerficationComponent } from './profile-verfication/profile-verfication.component';
 import { ProfileLeadersboardComponent } from './profile-leadersboard/profile-leadersboard.component';
+import { LoyalityModelComponent } from './components/loyality-model/loyality-model.component';
+import { QuizQuestionsComponent } from './quiz-questions/quiz-questions.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { ProfileLeadersboardComponent } from './profile-leadersboard/profile-lea
     MyTeamsComponent,
     ProfileVerficationComponent,
     ProfileLeadersboardComponent,
+    LoyalityModelComponent,
+    QuizQuestionsComponent,
   ],
   imports: [CommonModule, ProfileRoutingModule, SharedModule],
 })
