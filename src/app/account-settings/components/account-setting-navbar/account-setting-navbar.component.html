@@ -5,14 +5,30 @@
   </div>
   <ul>
     <li fxLayout="row" fxLayoutAlign="start center">
-      <a [routerLink]="['./']" routerLinkActive="active">Profile Settings</a>
+      <a
+        [routerLink]="['./']"
+        routerLinkActive="active"
+        fxLayout="row"
+        fxLayoutAlign="start center"
+      >
+        <img
+          src="../../../../assets/images/profile-settings.png"
+          alt=""
+          title=""
+        />
+        Profile Settings
+      </a>
     </li>
     <li fxLayout="row" fxLayoutAlign="start center" routerLinkActive="active">
-      <!-- <img src="../../../../../assets/images/chat_audio.png" /> -->
+      <img src="../../../../assets/images/teams_proile.png" alt="" title="" />
       <a [routerLink]="['./favourite-team']">Favorite Teams</a>
     </li>
     <li fxLayout="row" fxLayoutAlign="start center">
-      <!-- <img src="../../../../../assets/images/league.png" /> -->
+      <img
+        src="../../../../assets/images/change_password.png"
+        alt=""
+        title=""
+      />
       <a routerLinkActive="active" [routerLink]="['./change-password']"
         >Change Password</a
       >

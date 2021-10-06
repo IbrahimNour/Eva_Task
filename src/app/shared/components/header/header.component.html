@@ -34,12 +34,41 @@
       <img src="../../../../assets/images/personal.jpeg" alt="" title="" />
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item [routerLink]="['../account-settings']">
-        Account Settings
+      <button
+        mat-menu-item
+        [routerLink]="['../account-settings']"
+        fxLayout="row"
+        fxLayoutAlign="start center"
+      >
+        <img
+          src="../../../../assets/images/Ellipse 11.png"
+          class="icon"
+          style="width: 35px"
+        />
+        <span class="span">Account Settings</span>
       </button>
-      <button mat-menu-item>LeaderBoard</button>
-      <button mat-menu-item>Statistics</button>
-      <button mat-menu-item>LogOut</button>
+      <button mat-menu-item fxLayout="row" fxLayoutAlign="start center">
+        <img
+          src="../../../../assets/images/leaderboard_icon.png"
+          alt=""
+          title=""
+          class="icon"
+        />
+        <span class="span">LeaderBoard</span>
+      </button>
+      <button mat-menu-item fxLayout="row" fxLayoutAlign="start center">
+        <img src="../../../../assets/images/statistics_icon.png" class="icon" />
+        <span class="span">Statistics</span>
+      </button>
+      <button mat-menu-item fxLayout="row" fxLayoutAlign="start center">
+        <img
+          src="../../../../assets/images/logout.png"
+          alt=""
+          title=""
+          class="icon"
+        />
+        <span class="span"> LogOut</span>
+      </button>
     </mat-menu>
   </div>
 </mat-toolbar>

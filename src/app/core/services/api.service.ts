@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -6,19 +7,25 @@ import { environment } from '../../../environments/environment';
 @Injectable({
   providedIn: 'root',
 })
-export class ApiServiceService {
-  constructor(private readonly http: HttpClient) {}
+export class ApiService {
+  constructor(
+    private readonly http: HttpClient,
+    private translate: TranslateService
+  ) {}
 
   getUploadHeaders() {
     const token: string | null = localStorage.getItem('token') || null;
+    const language: string = localStorage.getItem('lang')
+      ? String(localStorage.getItem('lang'))
+      : this.translate.defaultLang;
     return {
       headers: new HttpHeaders()
         .set('Authorization', 'Bearer ' + token)
-        .set('AcademyId', '1'),
+        .set('lang', language),
     };
   }
 
-  public get<TResponse>(type: string, params: any): Observable<TResponse> {
+  public get<TResponse>(type: string, params?: any): Observable<TResponse> {
     return this.http.get<TResponse>(environment.BASE_URL + type, {
       params: { ...params },
       ...this.getUploadHeaders(),
