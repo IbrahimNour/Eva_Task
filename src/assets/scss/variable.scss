@@ -77,6 +77,7 @@ $devotana-light-theme: mat-light-theme(
 @import "../../app/pages/profile/profile-theme.scss";
 @import "../../app/account-settings/account-settings-theme.scss";
 @import "../../app/pages/player-info/player-info.component.scss";
+@import "../../app/pages/team-info/team-info.component.scss";
 
 @mixin componnent-theme($theme) {
   @include landing-page-theme($theme);
@@ -92,6 +93,7 @@ $devotana-light-theme: mat-light-theme(
   @include profile-component($theme);
   @include account-settings-component($theme);
   @include player-infp-theme($theme);
+  @include team-info-component($theme);
 }
 @include angular-material-theme($devotana-light-theme);
 @include componnent-theme($devotana-light-theme);
