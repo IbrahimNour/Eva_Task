@@ -42,6 +42,13 @@ const routes: Routes = [
         loadChildren: () =>
           import('./team-info/team-info.module').then((m) => m.TeamInfoModule),
       },
+      {
+        path: 'voice-room',
+        loadChildren: () =>
+          import('./voice-rooms/voice-rooms.module').then(
+            (m) => m.VoiceRoomsModule
+          ),
+      },
     ],
   },
 ];

@@ -1,0 +1,28 @@
+@mixin voice-room-component($theme) {
+  app-voice-rooms {
+    .rooms-list {
+      &__header {
+        div {
+          padding-bottom: 20px;
+          h1 {
+            color: $dark-color;
+            font-weight: 300;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+          }
+          p {
+            color: $dark-color;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            font-weight: 300;
+          }
+        }
+        button {
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
