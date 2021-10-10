@@ -1,1 +1,14 @@
-<p>upcoming-events works!</p>
+<div class="upcoming-events">
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <h1>Upcoming Events</h1>
+    <p fxLayout="row" fxLayoutAlign="start center" (click)="addEvent()">
+      <img src="../../../../assets/images/plus_icon.png" alt="" title="" />
+      <span>Add New Event</span>
+    </p>
+  </div>
+  <div class="upcoming-events__content">
+    <app-event-card></app-event-card>
+    <app-event-card></app-event-card>
+    <app-event-card></app-event-card>
+  </div>
+</div>

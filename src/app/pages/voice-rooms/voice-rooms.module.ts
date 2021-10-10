@@ -9,6 +9,9 @@ import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.compo
 import { RoomCardComponent } from './components/room-card/room-card.component';
 import { EventCardComponent } from './components/event-card/event-card.component';
 import { VoiceRoomsListComponent } from './voice-rooms-list/voice-rooms-list.component';
+import { EventFormComponent } from './event-form/event-form.component';
+import { JoinRoomComponent } from './join-room/join-room.component';
+import { CreateRoomComponent } from './components/create-room/create-room.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { VoiceRoomsListComponent } from './voice-rooms-list/voice-rooms-list.com
     RoomCardComponent,
     EventCardComponent,
     VoiceRoomsListComponent,
+    EventFormComponent,
+    JoinRoomComponent,
+    CreateRoomComponent,
   ],
   imports: [CommonModule, VoiceRoomsRoutingModule, SharedModule],
 })

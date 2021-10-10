@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>Create New Room</h2>
+<mat-dialog-content class="mat-typography">
+  <form fxLayout="column" fxLayoutAlign="space-between stretch">
+    <mat-form-field appearance="outline">
+      <mat-label>Search</mat-label>
+      <input matInput />
+    </mat-form-field>
+    <div
+      fxLayout="row"
+      fxLayoutAlign="space-around center"
+      style="margin: 20px 0"
+    >
+      <div fxLayout="column" fxLayoutAlign="center center" class="item active">
+        <img src="../../../../../assets/images/public.png" alt="" title="" />
+        <span>Open</span>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center" class="item">
+        <img src="../../../../../assets/images/private.png" alt="" title="" />
+        <span>Fans</span>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center" class="item">
+        <img src="../../../../../assets/images/fans.png" alt="" title="" />
+        <span>Private</span>
+      </div>
+    </div>
+  </form>
+  <p>Open To Every One</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button
+    mat-button
+    mat-raised-button
+    [mat-dialog-close]="true"
+    cdkFocusInitial
+    color="primary"
+  >
+    Create Room
+  </button>
+</mat-dialog-actions>

@@ -27,6 +27,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 
 const MATERIAL_MODULES = [
   MatButtonModule,
@@ -48,6 +49,7 @@ const MATERIAL_MODULES = [
   MatNativeDateModule,
   MatMenuModule,
   MatDialogModule,
+  NgxMaterialTimepickerModule,
 ];
 const COMPONENTS = [HeaderComponent, FooterComponent];
 

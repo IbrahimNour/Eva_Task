@@ -1,0 +1,36 @@
+span {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+img {
+  width: 100px;
+}
+
+.item {
+  margin: 0 10px;
+}
+
+h2 {
+  color: #0f183e;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: #5c699e;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.active {
+  border: 1px solid #0f183e;
+  border-radius: 10px;
+  span {
+    color: #0f183e;
+  }
+}
+
+button {
+  margin: 0 auto;
+}

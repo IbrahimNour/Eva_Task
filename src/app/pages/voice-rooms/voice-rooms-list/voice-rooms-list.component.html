@@ -6,23 +6,68 @@
   >
     <div fxLayout="row" fxLayoutAlign="space-between center">
       <h1>Voice Rooms</h1>
-      <p>Upcoming Events</p>
+      <p [routerLink]="['./upcoming-events']" style="cursor: pointer">
+        Upcoming Events
+      </p>
     </div>
-    <button mat-raised-button color="primary">New Room</button>
+    <button mat-raised-button color="primary" (click)="openDialog()">
+      New Room
+    </button>
   </div>
 
   <div
     fxLayout="row wrap"
     fxLayoutAlign="center center"
     fxLayout.xs="column wrap"
+    style="padding: 20px 0"
   >
-    <app-room-card fxFlex="25"></app-room-card>
-    <app-room-card fxFlex="25"></app-room-card>
-    <app-room-card fxFlex="25"></app-room-card>
-    <app-room-card fxFlex="25"></app-room-card>
-    <app-room-card fxFlex="25"></app-room-card>
-    <app-room-card fxFlex="25"></app-room-card>
-    <app-room-card fxFlex="25"></app-room-card>
-    <app-room-card fxFlex="25"></app-room-card>
+    <app-room-card
+      fxFlex="25"
+      fxFlex.sm="33.33333"
+      fxFlex.md="33.33333"
+      fxFlex.lg="31.33333"
+    ></app-room-card>
+    <app-room-card
+      fxFlex="25"
+      fxFlex.sm="33.33333"
+      fxFlex.md="33.33333"
+      fxFlex.lg="31.33333"
+    ></app-room-card>
+    <app-room-card
+      fxFlex="25"
+      fxFlex.sm="33.33333"
+      fxFlex.md="33.33333"
+      fxFlex.lg="31.33333"
+    ></app-room-card>
+    <app-room-card
+      fxFlex="25"
+      fxFlex.sm="33.33333"
+      fxFlex.md="33.33333"
+      fxFlex.lg="31.33333"
+    ></app-room-card>
+    <app-room-card
+      fxFlex="25"
+      fxFlex.sm="33.33333"
+      fxFlex.md="33.33333"
+      fxFlex.lg="31.33333"
+    ></app-room-card>
+    <app-room-card
+      fxFlex="25"
+      fxFlex.sm="33.33333"
+      fxFlex.md="33.33333"
+      fxFlex.lg="31.33333"
+    ></app-room-card>
+    <app-room-card
+      fxFlex="25"
+      fxFlex.sm="33.33333"
+      fxFlex.md="33.33333"
+      fxFlex.lg="31.33333"
+    ></app-room-card>
+    <app-room-card
+      fxFlex="25"
+      fxFlex.sm="33.33333"
+      fxFlex.md="33.33333"
+      fxFlex.lg="31.33333"
+    ></app-room-card>
   </div>
 </section>
