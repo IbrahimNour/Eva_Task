@@ -1,39 +1,96 @@
-<h2 mat-dialog-title>Create New Room</h2>
-<mat-dialog-content class="mat-typography">
-  <form fxLayout="column" fxLayoutAlign="space-between stretch">
-    <mat-form-field appearance="outline">
-      <mat-label>Search</mat-label>
-      <input matInput />
-    </mat-form-field>
-    <div
-      fxLayout="row"
-      fxLayoutAlign="space-around center"
-      style="margin: 20px 0"
+<div *ngIf="!choosePlayerCheck">
+  <h2 mat-dialog-title>Create New Room</h2>
+  <mat-dialog-content class="mat-typography">
+    <form fxLayout="column" fxLayoutAlign="space-between stretch">
+      <mat-form-field appearance="outline">
+        <mat-label>Search</mat-label>
+        <input matInput />
+      </mat-form-field>
+      <div
+        fxLayout="row"
+        fxLayoutAlign="space-around center"
+        style="margin: 20px 0"
+      >
+        <div
+          fxLayout="column"
+          fxLayoutAlign="center center"
+          class="item active"
+        >
+          <img src="../../../../../assets/images/public.png" alt="" title="" />
+          <span>Open</span>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center center" class="item">
+          <img src="../../../../../assets/images/private.png" alt="" title="" />
+          <span>Fans</span>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center center" class="item">
+          <img src="../../../../../assets/images/fans.png" alt="" title="" />
+          <span>Private</span>
+        </div>
+      </div>
+    </form>
+    <p>Open To Every One</p>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button
+      mat-button
+      mat-raised-button
+      cdkFocusInitial
+      color="primary"
+      (click)="onhandelChoosePlayer()"
     >
-      <div fxLayout="column" fxLayoutAlign="center center" class="item active">
-        <img src="../../../../../assets/images/public.png" alt="" title="" />
-        <span>Open</span>
+      Choose Player
+    </button>
+  </mat-dialog-actions>
+</div>
+
+<div *ngIf="choosePlayerCheck">
+  <h2 mat-dialog-title>Add People to this room</h2>
+
+  <mat-dialog-content class="mat-typography">
+    <form fxLayout="column" fxLayoutAlign="space-between stretch">
+      <div class="chooen-people" fxLayout="row" fxLayoutAlign="start center">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <img
+            src="../../../../../assets/images/Ellipse 11.png"
+            alt=""
+            title="user"
+          />
+          <p>Ali</p>
+        </div>
       </div>
-      <div fxLayout="column" fxLayoutAlign="center center" class="item">
-        <img src="../../../../../assets/images/private.png" alt="" title="" />
-        <span>Fans</span>
+      <mat-form-field appearance="outline">
+        <mat-label>Search For People</mat-label>
+        <input matInput />
+      </mat-form-field>
+      <div
+        fxLayout="column"
+        fxLayoutAlign="center start"
+        style="margin: 20px 0"
+      >
+        <p class="result">Result :</p>
+
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <img
+            src="../../../../../assets/images/Ellipse 11.png"
+            alt=""
+            title="user"
+          />
+          <p>Ali</p>
+        </div>
       </div>
-      <div fxLayout="column" fxLayoutAlign="center center" class="item">
-        <img src="../../../../../assets/images/fans.png" alt="" title="" />
-        <span>Private</span>
-      </div>
-    </div>
-  </form>
-  <p>Open To Every One</p>
-</mat-dialog-content>
-<mat-dialog-actions align="end">
-  <button
-    mat-button
-    mat-raised-button
-    [mat-dialog-close]="true"
-    cdkFocusInitial
-    color="primary"
-  >
-    Create Room
-  </button>
-</mat-dialog-actions>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button
+      mat-button
+      mat-raised-button
+      cdkFocusInitial
+      [mat-dialog-close]="true"
+      color="primary"
+      (click)="onhandelChoosePlayer()"
+    >
+      Invite To This Room
+    </button>
+  </mat-dialog-actions>
+</div>

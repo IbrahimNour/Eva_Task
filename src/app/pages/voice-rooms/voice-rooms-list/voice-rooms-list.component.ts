@@ -14,7 +14,9 @@ export class VoiceRoomsListComponent implements OnInit {
 
   openDialog(): void {
     console.log('open dialog !');
-    const dialogRef = this.dialog.open(CreateRoomComponent);
+    const dialogRef = this.dialog.open(CreateRoomComponent, {
+      width: '700px',
+    });
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
