@@ -2,6 +2,7 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
 
 // MATERIAL MODULES
 import { MatButtonModule } from '@angular/material/button';
@@ -64,6 +65,7 @@ const COMPONENTS = [HeaderComponent, FooterComponent];
       isCharsCode: true,
     }),
     ReactiveFormsModule,
+    HttpClientModule,
     TranslateModule.forRoot({ extend: true }),
   ],
   exports: [
@@ -72,6 +74,7 @@ const COMPONENTS = [HeaderComponent, FooterComponent];
     TranslateModule,
     ReactiveFormsModule,
     CodeInputModule,
+    HttpClientModule,
   ],
 })
 export class SharedModule {}

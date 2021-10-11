@@ -1,13 +1,13 @@
 <section class="home-content">
   <mat-tab-group mat-align-tabs="center" [selectedIndex]="1">
     <mat-tab label="Finished">
-      <app-finished></app-finished>
+      <app-finished [finishMatches]="finishedMatches"></app-finished>
     </mat-tab>
     <mat-tab label="Ongoing" active="true">
-      <app-on-going></app-on-going>
+      <app-on-going [onGoingMatches]="onGoingMatches"></app-on-going>
     </mat-tab>
     <mat-tab label="Upcoming">
-      <app-upcoming></app-upcoming>
+      <app-upcoming [upComing]="upComing"></app-upcoming>
     </mat-tab>
   </mat-tab-group>
 </section>

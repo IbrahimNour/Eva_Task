@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  BASE_URL: '',
+  BASE_URL: 'http://127.0.0.1:8000/api/v1/',
   BASE_FILE_URL: '',
 };
 
