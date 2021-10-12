@@ -29,12 +29,12 @@ const routes: Routes = [
         (m) => m.AuthenticationModule
       ),
   },
-  //{ path: '404', component: NotFoundComponent },
+  { path: '404', component: NotFoundComponent },
   { path: '', redirectTo: 'landing-page', pathMatch: 'full' },
-  // {
-  //   path: '**',
-  //   redirectTo: '/404',
-  // },
+  {
+    path: '**',
+    redirectTo: '/404',
+  },
 ];
 
 @NgModule({
