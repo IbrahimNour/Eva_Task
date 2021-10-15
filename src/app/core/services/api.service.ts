@@ -8,10 +8,7 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root',
 })
 export class ApiService {
-  constructor(
-    private readonly http: HttpClient,
-    private translate: TranslateService
-  ) {}
+  constructor(private readonly http: HttpClient) {}
 
   getUploadHeaders() {
     const token: string | null = localStorage.getItem('token') || null;
