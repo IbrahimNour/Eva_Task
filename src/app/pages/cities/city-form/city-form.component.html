@@ -8,9 +8,9 @@
   <h1>{{ formType }} City</h1>
 
   <mat-form-field class="example-full-width" appearance="outline">
-    <mat-label>Country Name</mat-label>
+    <mat-label>City Name</mat-label>
     <input matInput placeholder="name" formControlName="name" required />
-    <mat-error *ngIf="isValid('name', 'required') || isValid('Email', 'email')"
+    <mat-error *ngIf="isValid('name', 'required')"
       >name is required !</mat-error
     >
   </mat-form-field>
