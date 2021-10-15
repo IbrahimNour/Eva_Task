@@ -1,15 +1,31 @@
-<form fxLayout="column" fxLayoutAlign="space-around stretch">
-  <h1>Login to Your Account</h1>
-  <p class="subTitle">Welcome Back !</p>
-
-  <mat-form-field class="example-full-width" appearance="outline">
-    <mat-label>Email</mat-label>
-    <input type="email" matInput placeholder="Ex. pat@example.com" />
+<form
+  [formGroup]="form"
+  (submit)="onSubmitted()"
+  fxLayout="column"
+  fxLayoutAlign="center stretch"
+  fxLayoutGap="10"
+>
+  <mat-form-field appearance="outline">
+    <mat-label>Enter your email</mat-label>
+    <input
+      matInput
+      placeholder="pat@example.com"
+      formControlName="Email"
+      required
+    />
+    <mat-error *ngIf="isValid('Email', 'required') || isValid('Email', 'email')"
+      >Enter Valid Email !</mat-error
+    >
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Enter your password</mat-label>
-    <input matInput [type]="hide ? 'password' : 'text'" />
+    <input
+      matInput
+      [type]="hide ? 'password' : 'text'"
+      formControlName="Password"
+      required
+    />
     <button
       mat-icon-button
       matSuffix
@@ -19,10 +35,17 @@
     >
       <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
     </button>
+    <mat-error *ngIf="isValid('Password', 'required')"
+      >password is requird !</mat-error
+    >
   </mat-form-field>
-  <button mat-raised-button color="primary" class="login">Login</button>
-  <div fxLayout="row" fxLayoutAlign="space-between center">
-    <p (click)="onHandelRegister()">Have no Account ? <a> Sign up </a></p>
-    <p (click)="handelForgetPassword()">forget password ?</p>
-  </div>
+
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="form.invalid"
+  >
+    Login
+  </button>
 </form>

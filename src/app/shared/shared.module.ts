@@ -6,9 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 // MATERIAL MODULES
 import { MatButtonModule } from '@angular/material/button';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -29,6 +27,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
 
 const MATERIAL_MODULES = [
   MatButtonModule,
@@ -52,10 +53,10 @@ const MATERIAL_MODULES = [
   MatDialogModule,
   NgxMaterialTimepickerModule,
 ];
-const COMPONENTS = [HeaderComponent, FooterComponent];
+const COMPONENTS = [NotFoundComponent, HeaderComponent, ConfirmDeleteComponent];
 
 @NgModule({
-  declarations: [...COMPONENTS, NotFoundComponent],
+  declarations: [...COMPONENTS],
   imports: [
     CommonModule,
     ...MATERIAL_MODULES,

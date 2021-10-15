@@ -15,13 +15,8 @@ export class ApiService {
 
   getUploadHeaders() {
     const token: string | null = localStorage.getItem('token') || null;
-    const language: string = localStorage.getItem('lang')
-      ? String(localStorage.getItem('lang'))
-      : this.translate.defaultLang;
     return {
-      headers: new HttpHeaders()
-        .set('Authorization', 'Bearer ' + token)
-        .set('lang', language),
+      headers: new HttpHeaders().set('Authorization', 'Bearer ' + token),
     };
   }
 
@@ -36,11 +31,6 @@ export class ApiService {
     type: string,
     data: TInput
   ): Observable<TResponse> {
-    if (type === 'File/Upload') {
-      return this.http.post<TResponse>(environment.BASE_FILE_URL + type, data, {
-        ...this.getUploadHeaders(),
-      });
-    }
     return this.http.post<TResponse>(environment.BASE_URL + type, data, {
       ...this.getUploadHeaders(),
     });
@@ -61,7 +51,7 @@ export class ApiService {
     type: string,
     id: TInput
   ): Observable<TResponse> {
-    return this.http.delete<TResponse>(environment.BASE_URL + type, {
+    return this.http.delete<TResponse>(environment.BASE_URL + type + '/' + id, {
       ...this.getUploadHeaders(),
     });
   }

@@ -1,62 +1,19 @@
-@mixin auth-component($theme) {
+@mixin authentication-theme($theme) {
   app-authentication {
-    .auth {
-      width: 100%;
-      min-height: 600px;
-      padding: 40px 0;
-      background: url("../../assets/images/chaos-soccer-gear-Cjfl8r_eYxY-unsplash.png")
-        no-repeat center center;
-    }
-
     form {
-      background-color: $background-color;
-      width: 500px;
+      margin: 50px auto;
+      width: 50%;
+      background-color: $light-color;
+      box-shadow: 0 0 0 4px #ccc;
       padding: 20px;
       border-radius: 10px;
-      margin: 0 10%;
-      min-height: 200px;
-      h1 {
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        font-size: 25px;
-        margin: 10px 0;
-        color: $dark-color;
-      }
-
-      .subTitle {
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        font-size: 20px;
-        margin: 20px 0;
-        margin-top: 0;
-      }
-
-      .login {
-        padding: 8px;
-      }
-      p {
-        cursor: pointer;
-        font-weight: 100;
-        color: $ligheter-color;
-        padding: 0 10px;
-        font-size: 14px;
-        transition: all 0.5s;
-        &:hover {
-          color: $dark-color;
-        }
-        a {
-          font-size: 13px;
-          color: $dark-color;
-          margin: 0;
-          padding: 0;
-          margin-bottom: 20px;
-        }
-      }
       @media (max-width: 767px) {
-        width: 90%;
-        margin: 0 auto;
+        form {
+          width: 100%;
+        }
+      }
+      button[type="submit"] {
+        padding: 5px !important;
       }
     }
   }

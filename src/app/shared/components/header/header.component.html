@@ -1,74 +1,11 @@
-<mat-toolbar
-  color="primary"
-  fxLayout="row"
-  fxLayoutAlign="space-between center"
->
-  <!-- <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with menu icon"
-  >
-    <mat-icon>menu</mat-icon>
-  </button> -->
-
-  <div class="logo" fxLayout="row" fxLayoutAlign="start center">
-    <img
-      class="logo"
-      src="../../../../assets/images/LOGO.png"
-      alt="Logo.ng"
-      title="Devotana"
-      [routerLink]="['/']"
-    />
-    <p [routerLink]="['/']">Devotana</p>
-
-    <select (change)="onLanguageChange()" [(ngModel)]="selectedLanguage">
-      <option value="en">English</option>
-      <option value="ar">Arabic</option>
-    </select>
+<mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+  <div class="logo">
+    <h1>Eva Task</h1>
   </div>
-
-  <div class="user-actions" fxLayout="row" fxLayoutAlign="center center">
-    <mat-icon>search</mat-icon>
-    <mat-icon style="margin: 0 10px">notifications</mat-icon>
-    <button mat-button [matMenuTriggerFor]="menu" class="menu">
-      <img src="../../../../assets/images/personal.jpeg" alt="" title="" />
-    </button>
-    <mat-menu #menu="matMenu">
-      <button
-        mat-menu-item
-        [routerLink]="['../account-settings']"
-        fxLayout="row"
-        fxLayoutAlign="start center"
-      >
-        <img
-          src="../../../../assets/images/Ellipse 11.png"
-          class="icon"
-          style="width: 35px"
-        />
-        <span class="span">Account Settings</span>
-      </button>
-      <button mat-menu-item fxLayout="row" fxLayoutAlign="start center">
-        <img
-          src="../../../../assets/images/leaderboard_icon.png"
-          alt=""
-          title=""
-          class="icon"
-        />
-        <span class="span">LeaderBoard</span>
-      </button>
-      <button mat-menu-item fxLayout="row" fxLayoutAlign="start center">
-        <img src="../../../../assets/images/statistics_icon.png" class="icon" />
-        <span class="span">Statistics</span>
-      </button>
-      <button mat-menu-item fxLayout="row" fxLayoutAlign="start center">
-        <img
-          src="../../../../assets/images/logout.png"
-          alt=""
-          title=""
-          class="icon"
-        />
-        <span class="span"> LogOut</span>
-      </button>
-    </mat-menu>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <ul fxLayout="row" fxLayoutAlign="start center">
+      <li [routerLink]="['./']">Countries</li>
+      <li [routerLink]="['./cities']">Cities</li>
+    </ul>
   </div>
 </mat-toolbar>

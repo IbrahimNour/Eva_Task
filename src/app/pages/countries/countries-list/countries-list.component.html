@@ -1,0 +1,51 @@
+<button
+  mat-raised-button
+  class="add-btn"
+  color="primary"
+  [routerLink]="['./country']"
+>
+  Add Country
+</button>
+<table
+  mat-table
+  [dataSource]="countries"
+  class="mat-elevation-z8"
+  class="countriy-list"
+>
+  <!-- Position Column -->
+  <ng-container matColumnDef="Id">
+    <th mat-header-cell *matHeaderCellDef>Id</th>
+    <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="Name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let element">
+      <button
+        mat-stroked-button
+        color="primary"
+        [routerLink]="['./country']"
+        [queryParams]="{ id: element.id }"
+      >
+        <mat-icon aria-hidden="false" aria-label="Example home icon"
+          >edit</mat-icon
+        >
+      </button>
+      <button mat-stroked-button color="accent" (click)="handelDelete(element)">
+        <mat-icon aria-hidden="false" aria-label="Example home icon"
+          >delete</mat-icon
+        >
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

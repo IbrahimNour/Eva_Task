@@ -14,10 +14,7 @@ import { ToastrService } from 'ngx-toastr';
 
 @Injectable()
 export class HttpErrorInterceptor implements HttpInterceptor {
-  constructor(
-    private router: Router,
-    private readonly toastr: ToastrService,
-  ) {}
+  constructor(private router: Router, private readonly toastr: ToastrService) {}
 
   intercept(
     request: HttpRequest<any>,
@@ -55,7 +52,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
 
     switch (error.status) {
       case 401:
-        this.toastr.error('Please login again !');
+        this.toastr.error('You not Authorithed !, Please login again !');
         //this.accountService.logOut();
         handled = true;
         break;

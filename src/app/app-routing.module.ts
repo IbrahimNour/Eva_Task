@@ -1,27 +1,9 @@
+import { AuthGuardService } from './core/guards/auth-guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 
 const routes: Routes = [
-  {
-    path: 'landing-page',
-    loadChildren: () =>
-      import('./landing-page/landing-page.module').then(
-        (m) => m.LandingPageModule
-      ),
-  },
-  {
-    path: 'pages',
-    loadChildren: () =>
-      import('./pages/pages.module').then((m) => m.PagesModule),
-  },
-  {
-    path: 'account-settings',
-    loadChildren: () =>
-      import('./account-settings/account-settings.module').then(
-        (m) => m.AccountSettingsModule
-      ),
-  },
   {
     path: 'auth',
     loadChildren: () =>
@@ -29,8 +11,13 @@ const routes: Routes = [
         (m) => m.AuthenticationModule
       ),
   },
+  {
+    path: 'pages',
+    loadChildren: () =>
+      import('./pages/pages.module').then((m) => m.PagesModule),
+  },
+  { path: '', redirectTo: 'auth', pathMatch: 'full' },
   { path: '404', component: NotFoundComponent },
-  { path: '', redirectTo: 'landing-page', pathMatch: 'full' },
   {
     path: '**',
     redirectTo: '/404',

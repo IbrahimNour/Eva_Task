@@ -1,0 +1,31 @@
+@mixin cities-component($theme) {
+  app-cities {
+    .city-list {
+      width: 100%;
+      button {
+        margin: 0 5px;
+      }
+    }
+    .add-btn {
+      margin: 20px 0;
+    }
+    .city-form {
+      width: 50%;
+      margin: 50px auto;
+      background-color: $light-color;
+      box-shadow: 0 0 0 4px #ccc;
+      padding: 30px;
+      h1 {
+        text-align: center;
+        color: $dark-color;
+        font-weight: 500;
+        margin: 20 0;
+        padding: 0;
+      }
+      &__submit {
+        width: inherit;
+        margin: 0 auto;
+      }
+    }
+  }
+}

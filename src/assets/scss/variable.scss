@@ -57,46 +57,20 @@ $mat-warn: (
 );
 $theme-warn: mat-palette($mat-warn, main, lighter, darker);
 
-$devotana-light-theme: mat-light-theme(
-  $theme-primary,
-  $theme-accent,
-  $theme-warn
-);
+$Eva-light-theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
 
 //$theme: mat-light-theme($primary,$accent,$warn);
 
-@import "../../app/landing-page/landing-page-theme.scss";
-@import "../../app/shared/components/footer/footer-theme.scss";
 @import "../../app/authentication/authentication-theme.scss";
-@import "../../app/pages/contact-us/contactUs-theme.scss";
-@import "../../app/pages/home/home-theme.scss";
-@import "../../app/pages/home/home-content/home-content.component.scss";
-@import "../../app/pages/leagues/leagues-theme.scss";
-@import "../../app/pages/leagues/league-match-details/league-match-detail-theme.scss";
-@import "../../app/pages/leagues/league-statistic/league-statistic-theme.scss";
-@import "../../app/pages/leagues/league-standings/league-standings-theme.scss";
-@import "../../app/pages/profile/profile-theme.scss";
-@import "../../app/account-settings/account-settings-theme.scss";
-@import "../../app/pages/player-info/player-info.component.scss";
-@import "../../app/pages/team-info/team-info.component.scss";
-@import "../../app/pages/voice-rooms/voice-rooms-theme.scss";
+@import "../../app/shared/components/header/header.component.scss";
+@import "../../app/pages/countries/countries-theme.scss";
+@import "../../app/pages/cities/cities-theme.scss";
 
 @mixin componnent-theme($theme) {
-  @include landing-page-theme($theme);
-  @include footer-component($theme);
-  @include auth-component($theme);
-  @include contactUs-component($theme);
-  @include home-component($theme);
-  @include home-content-component($theme);
-  @include leagues-component($theme);
-  @include league-match-detail-component($theme);
-  @include league-statistic-component($theme);
-  @include laegue-standigs-component($theme);
-  @include profile-component($theme);
-  @include account-settings-component($theme);
-  @include player-infp-theme($theme);
-  @include team-info-component($theme);
-  @include voice-room-component($theme);
+  @include authentication-theme($theme);
+  @include header-component($theme);
+  @include country-component($theme);
+  @include cities-component($theme);
 }
-@include angular-material-theme($devotana-light-theme);
-@include componnent-theme($devotana-light-theme);
+@include angular-material-theme($Eva-light-theme);
+@include componnent-theme($Eva-light-theme);

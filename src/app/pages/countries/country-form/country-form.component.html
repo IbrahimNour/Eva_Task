@@ -1,0 +1,26 @@
+<form
+  [formGroup]="form"
+  (submit)="onSubmitted()"
+  fxLayout="column"
+  fxLayoutAlign="center stretch"
+  class="country-form"
+>
+  <h1>{{ formType }} Country</h1>
+
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Country Name</mat-label>
+    <input matInput placeholder="name" formControlName="name" required />
+    <mat-error *ngIf="isValid('name', 'required') || isValid('Email', 'email')"
+      >name is required !</mat-error
+    >
+  </mat-form-field>
+  <button
+    type="submit"
+    mat-raised-button
+    color="primary"
+    [disabled]="form.invalid"
+    class="country-form__submit"
+  >
+    Save
+  </button>
+</form>
